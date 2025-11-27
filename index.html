@@ -1,6 +1,290 @@
-<html>
-	<head>
-	</head>
-	<body>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Mitchell May Games - innovative mobile games including Cross Cribbage, Tile Cribbage, Prosaic word game, and Cribbler. Download on iOS and Android.">
+    <meta name="keywords" content="mobile games, cribbage game, word game, puzzle game, iOS, Android, roguelike">
+    <meta name="author" content="Mitchell May">
+    <meta name="theme-color" content="#0f0f1a">
+    <meta property="og:title" content="Mitchell May Games - Mobile Games for iOS & Android">
+    <meta property="og:description" content="Play innovative mobile games: Cross Cribbage, Tile Cribbage, Prosaic, and Cribbler. Available on iOS and Android.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mmay.dev">
+    <!-- <meta property="og:image" content="https://mmay.dev/images/appstore.svg"> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mitchell May Games">
+    <meta name="twitter:description" content="Play innovative mobile games on iOS and Android">
+    <link rel="canonical" href="https://mmay.dev">
+    <!-- <link rel="preconnect" href="https://apps.apple.com">
+    <link rel="preconnect" href="https://play.google.com"> -->
+    <title>Mitchell May Games - Mobile Games for iOS & Android</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; margin: 0; padding: 0; background-color: #0f0f1a; color: #e8e6e3; transition: background 0.3s, color 0.3s; }
+        body.light-mode { background-color: #f8f9fb; color: #1a1a1a; }
+        header { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); color: white; text-align: center; padding: 2rem 0; box-shadow: 0 8px 32px rgba(0,0,0,0.4); position: relative; }
+        header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        header p { margin: 0.5rem 0 0; font-size: 1.1rem; font-weight: 300; opacity: 0.95; }
+        body.light-mode header { background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%); color: #1a1a1a; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+        body.light-mode header h1 { color: #0f3460; }
+        body.light-mode header p { color: #4a5568; }
+        .theme-toggle { position: absolute; top: 16px; right: 20px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); font-size: 1.3rem; cursor: pointer; color: #fff; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .theme-toggle:hover { background: rgba(255,255,255,0.25); }
+        body.light-mode .theme-toggle { background: rgba(0,0,0,0.08); border-color: rgba(0,0,0,0.12); color: #1a1a1a; }
+        body.light-mode .theme-toggle:hover { background: rgba(0,0,0,0.12); }
+        .game { background: #1a1a2e; margin: 2.5rem auto; padding: 2rem; border-radius: 16px; max-width: 800px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s, background 0.3s; color: #e8e6e3; border: 1px solid rgba(255,255,255,0.08); justify-items: center; }
+        body.light-mode .game { background: #ffffff; color: #1a1a1a; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); }
+        .game:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+        body.light-mode .game:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+        .game h2 { margin-top: 0; font-size: 1.8rem; font-weight: 700; background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        body.light-mode .game h2 { background: linear-gradient(135deg, #0f3460 0%, #533483 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .game p { line-height: 1.6; opacity: 0.9; }
+        .store-links img { margin-right: 1rem; height: 55px; transition: transform 0.2s; }
+        .store-links a:hover img { transform: scale(1.05); }
+        .carousel { display: flex; overflow-x: auto; gap: 12px; margin-top: 1.5rem; padding-bottom: 0.5rem; width: 550px; }
+        .carousel img { height: 280px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.3); transition: all 0.2s; }
+        body.light-mode .carousel img { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+        .carousel img:hover { transform: scale(1.02); box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+        body.light-mode .carousel img:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
+        .games-container { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+        @media (min-width: 1300px) { .games-container { grid-template-columns: 1fr 1fr; } }
+        /* Lightbox styles */
+        .lightbox { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.92); opacity: 0; pointer-events: none; transition: opacity 0.18s ease-in-out; z-index: 1000; padding: 20px; overflow: auto; backdrop-filter: blur(4px); }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox .viewer { max-width: 92vw; max-height: 90vh; height: 90vh; position: relative; display: flex; align-items: center; justify-content: center; }
+        .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
+        .lb-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 2rem; padding: 0.35rem 0.6rem; cursor: pointer; border-radius: 8px; z-index: 10; transition: all 0.2s; }
+        .lb-btn:hover { background: rgba(255,255,255,0.2); }
+        .lb-prev { left: 8px; }
+        .lb-next { right: 8px; }
+        .lb-close { position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 1.6rem; cursor: pointer; z-index: 10; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: all 0.2s; padding: 0; }
+        .lb-close:hover { background: rgba(255,255,255,0.2); }
+        .lb-meta { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 0.95rem; opacity: 0.95; z-index: 10; }
+        @media (max-width: 480px) { .lb-prev, .lb-next { font-size: 1.4rem; padding: 0.2rem 0.5rem; } .lb-close { top: 8px; right: 8px; } .lb-meta { bottom: 8px; } }
+    </style>
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mitchell May Games",
+      "url": "https://mmay.dev",
+      "logo": "https://mmay.dev/images/logo.png",
+      "description": "Mobile game developer creating innovative games for iOS and Android",
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Mitchell May Games",
+      "description": "A collection of innovative mobile games including Cross Cribbage, Tile Cribbage, Prosaic, and Cribbler",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://mmay.dev#cross-cribbage",
+            "name": "Cross Cribbage",
+            "description": "A fresh twist on classic cribbage, combining strategy and board-style play for an exciting experience.",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS, Android",
+            "url": "https://apps.apple.com/us/app/cross-cribbage/id1540640821"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://mmay.dev#tile-cribbage",
+            "name": "Tile Cribbage",
+            "description": "Build cribbage hands with tiles in this unique and addictive puzzle-style game.",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS, Android"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://mmay.dev#prosaic",
+            "name": "Prosaic",
+            "description": "A Scrabble-style roguelike adventure where words come to life in strategic gameplay.",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS, Android"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://mmay.dev#cribbler",
+            "name": "Cribbler",
+            "description": "Blends the best of Cross Cribbage, Sudoku, and other math puzzles into a unique and challenging game.",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS, Android"
+          }
+        ]
+      }
+    }
+    </script>
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('light-mode');
+            const btn = document.querySelector('.theme-toggle');
+            btn.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            const btn = document.querySelector('.theme-toggle');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                btn.textContent = '☀️';
+            } else {
+                btn.textContent = '🌙';
+            }
+        });
+
+        // Lightbox / gallery functionality
+        (function () {
+            let currentImages = [];
+            let currentIndex = 0;
+
+            function openLightbox(images, index) {
+                currentImages = images;
+                currentIndex = index;
+                updateLightbox();
+                document.getElementById('lightbox').classList.add('open');
+            }
+
+            function closeLightbox() {
+                document.getElementById('lightbox').classList.remove('open');
+            }
+
+            function updateLightbox() {
+                const lbImg = document.getElementById('lb-image');
+                const lbCaption = document.getElementById('lb-caption');
+                const lbCounter = document.getElementById('lb-counter');
+                if (!lbImg) return;
+                lbImg.src = currentImages[currentIndex].src;
+                lbCaption.textContent = currentImages[currentIndex].alt || '';
+                lbCounter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+            }
+
+            function showNext(delta) {
+                if (!currentImages.length) return;
+                currentIndex = (currentIndex + delta + currentImages.length) % currentImages.length;
+                updateLightbox();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Attach click handler to carousel images
+                document.querySelectorAll('.carousel').forEach(function (carousel) {
+                    const imgs = Array.from(carousel.querySelectorAll('img'));
+                    imgs.forEach(function (img, i) {
+                        img.style.cursor = 'zoom-in';
+                        img.addEventListener('click', function (e) {
+                            openLightbox(imgs, i);
+                        });
+                    });
+                });
+
+                // Lightbox controls
+                const lb = document.getElementById('lightbox');
+                if (!lb) return;
+
+                document.getElementById('lb-close').addEventListener('click', closeLightbox);
+                document.getElementById('lb-prev').addEventListener('click', function () { showNext(-1); });
+                document.getElementById('lb-next').addEventListener('click', function () { showNext(1); });
+
+                // Click outside image closes
+                lb.addEventListener('click', function (e) {
+                    if (e.target === lb) closeLightbox();
+                });
+
+                // keyboard navigation
+                document.addEventListener('keydown', function (e) {
+                    if (!lb.classList.contains('open')) return;
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') showNext(-1);
+                    if (e.key === 'ArrowRight') showNext(1);
+                });
+            });
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+        <h1>Mitchell May Games</h1>
+        <p>Explore my most popular mobile games</p>
+    </header>
+    <div class="games-container">
+
+    <div class="game">
+        <h2>Cross Cribbage</h2>
+        <p>A fresh twist on classic cribbage, combining strategy and board-style play for an exciting experience.</p>
+        <div class="store-links">
+            <a href="https://apps.apple.com/us/app/cross-cribbage/id1540640821" target="_blank" rel="noopener noreferrer"><img src="images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+        </div>
+        <div class="carousel">
+            <img src="images/cross1.webp" alt="Cross Cribbage Screenshot 1">
+            <img src="images/cross2.webp" alt="Cross Cribbage Screenshot 2">
+            <img src="images/cross3.webp" alt="Cross Cribbage Screenshot 3">
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>Tile Cribbage</h2>
+        <p>Build cribbage hands with tiles in this unique and addictive puzzle-style game.</p>
+        <div class="store-links">
+            <a href="https://apps.apple.com/us/app/tile-cribbage/id6739217881" target="_blank" rel="noopener noreferrer"><img src="images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
+            <a href="https://play.google.com/store/apps/details?id=dev.mmay.tilecribbage&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+        </div>
+        <div class="carousel">
+            <img src="images/tile1.webp" alt="Tile Cribbage Screenshot 1">
+            <img src="images/tile2.webp" alt="Tile Cribbage Screenshot 2">
+            <img src="images/tile3.webp" alt="Tile Cribbage Screenshot 3">
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>Prosaic</h2>
+        <p>A Scrabble-style roguelike adventure where words come to life in strategic gameplay.</p>
+        <div class="store-links">
+            <a href="https://apps.apple.com/us/app/prosaic-roguelike-word-game/id6747229529" target="_blank" rel="noopener noreferrer"><img src="images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
+            <a href="https://play.google.com/store/apps/details?id=dev.mmay.prosaic&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+        </div>
+        <div class="carousel">
+            <img src="images/prosaic1.webp" alt="Prosaic Screenshot 1">
+            <img src="images/prosaic2.webp" alt="Prosaic Screenshot 2">
+            <img src="images/prosaic3.webp" alt="Prosaic Screenshot 3">
+            <img src="images/prosaic4.webp" alt="Prosaic Screenshot 4">
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>Cribbler</h2>
+        <p>Blends the best of Cross Cribbage, Sudoku, and other math puzzles into a unique and challenging game.</p>
+        <div class="store-links">
+            <a href="https://apps.apple.com/us/app/cribbler/id6711329426" target="_blank" rel="noopener noreferrer"><img src="images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
+            <a href="https://play.google.com/store/apps/details?id=dev.mmay.cribbler&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+        </div>
+        <div class="carousel">
+            <img src="images/cribbler1.webp" alt="Cribbler Screenshot 1">
+            <img src="images/cribbler2.webp" alt="Cribbler Screenshot 2">
+            <img src="images/cribbler3.webp" alt="Cribbler Screenshot 3">
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Lightbox markup (hidden until opened) -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+        <div class="viewer">
+            <button id="lb-close" class="lb-close" aria-label="Close">&times;</button>
+            <button id="lb-prev" class="lb-btn lb-prev" aria-label="Previous">&#8249;</button>
+            <img id="lb-image" src="" alt="" />
+            <button id="lb-next" class="lb-btn lb-next" aria-label="Next">&#8250;</button>
+            <div class="lb-meta"><span id="lb-caption"></span> <span id="lb-counter" style="margin-left:8px;opacity:0.9"></span></div>
+        </div>
+    </div>
+
+</body>
 </html>
