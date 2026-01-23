@@ -34,7 +34,8 @@
 </head>
 <body style="margin: 0; background-color: black;">
   <div style="display: flex; justify-content: center; height: 100vh; align-items: center;">
-    <div id="flutter_target" style="height: min(100vh, 1000px); width: min(100vw, min(100vh, 1000px) * .65);"></div>
+    <!-- Always prevent more than 100 width/height. Also maintain a max aspect ratio of 3:4 (ipad) -->
+    <div id="flutter_target" style="height: min(100vh, calc(100vw / .75)); width: min(100vw, calc(100vh * .75));"></div>
   </div>
   <script src="flutter_bootstrap.js" async></script>
   </div>
