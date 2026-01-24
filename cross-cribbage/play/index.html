@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%; width: 100%;">
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -32,10 +32,10 @@
   <title>cross_cribbage</title>
   <link rel="manifest" href="manifest.json">
 </head>
-<body style="margin: 0; background-color: black;">
-  <div style="display: flex; justify-content: center; height: 100vh; align-items: center;">
+<body style="margin: 0; background-color: black; height: 100%; width: 100%;">
+  <div style="display: flex; justify-content: center; height: 100%; align-items: center;">
     <!-- Always prevent more than 100 width/height. Also maintain a max aspect ratio of 3:4 (ipad) -->
-    <div id="flutter_target" style="height: min(100vh, calc(100vw / .75)); width: min(100vw, calc(100vh * .75));"></div>
+    <div id="flutter_target" style="max-width: 100%; width: auto; height: 100%; aspect-ratio: 3/4;"></div>
   </div>
   <script src="flutter_bootstrap.js" async></script>
   </div>
