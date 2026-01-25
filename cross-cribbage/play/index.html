@@ -47,10 +47,14 @@
 <body style="margin: 0; background-color: black; height: 100%; width: 100%;">
   <div style="height: 100%; width: 100%; display: flex; flex-direction: column;">
     <div id="headerBar" style="flex: 0 1 50px; height: 50px; min-height: 50px; width: 100%;">
-      <div style="height: 100%; width: 100%; display: flex; align-items: center; background-color: #222222; flex: 1 1 auto;">
+      <div style="height: 100%; width: 100%; display: flex; align-items: center; background-color: #222222; flex: 1 1 auto; gap: 10px; justify-content: space-between;">
         <a href="../.." style="color: white; text-decoration: none; font-family: Arial, sans-serif; margin-left: 20px; font-size: 18px; display: flex; align-items: center; height: 100%;">&larr; More Games</a>
+        <div style="display: flex; gap: 10px;">
+          <a href="https://apps.apple.com/us/app/cross-cribbage/id1540640821" target="_blank" rel="noopener noreferrer"><img src="../../images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="../../images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+        </div>
+        <button id="hideButton" style="right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
       </div>
-      <button id="hideButton" style="position: absolute; top: 10px; right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
     </div>
     <div style="flex: 1 1 auto;">
       <div style="display: flex; justify-content: center; height: 100%; align-items: center;">
