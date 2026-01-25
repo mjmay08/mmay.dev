@@ -50,8 +50,8 @@
       <div style="height: 100%; width: 100%; display: flex; align-items: center; background-color: #222222; flex: 1 1 auto; gap: 10px; justify-content: space-between;">
         <a href="../.." style="color: white; text-decoration: none; font-family: Arial, sans-serif; margin-left: 20px; font-size: 18px; display: flex; align-items: center; height: 100%;">&larr; More Games</a>
         <div style="display: flex; gap: 10px; height: 100%; align-items: center;">
-          <a href="https://apps.apple.com/us/app/cross-cribbage/id1540640821" target="_blank" rel="noopener noreferrer"><img src="../../images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="../../images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+          <a id="ios-link" style="display: none;" href="https://apps.apple.com/us/app/cross-cribbage/id1540640821" target="_blank" rel="noopener noreferrer"><img src="../../images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
+          <a id="android-link" style="display: none;" href="https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="../../images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
         </div>
         <button id="hideButton" style="right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
       </div>
@@ -69,6 +69,32 @@
     hideButton.addEventListener('click', () => {
       document.getElementById('headerBar').style.display = 'none';
     });
+    function getMobileOperatingSystem() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      let os = 'unknown';
+
+      // Windows Phone must come first because its UA also contains "Android"
+      if (/windows phone/i.test(userAgent)) {
+        os = "Windows Phone";
+      } else if (/android/i.test(userAgent)) {
+        os = "Android";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        os = "iOS";
+      }
+
+      return os;
+    }
+    const osName = getMobileOperatingSystem();
+
+    if (osName === 'Android') {
+      document.getElementById('android-link').style.display = 'block';
+    } else if (osName === 'iOS') {
+      document.getElementById('ios-link').style.display = 'block';
+    } else {
+      document.getElementById('ios-link').style.display = 'block';
+      document.getElementById('android-link').style.display = 'block';
+    }
   </script>
 </body>
 </html>
