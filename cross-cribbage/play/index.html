@@ -35,11 +35,22 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body style="margin: 0; background-color: black; height: 100%; width: 100%;">
+  <div id="headerBar" style="height: 50px; width: 100%;">
+    <div style="height: 100%; width: 100%; display: flex; align-items: center; background-color: #222222;">
+      <a href="../.." style="color: white; text-decoration: none; font-family: Arial, sans-serif; margin-left: 20px; font-size: 18px;">&larr; More Games</a>
+    </div>
+    <button id="hideButton" style="position: absolute; top: 10px; right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
+  </div>
   <div style="display: flex; justify-content: center; height: 100%; align-items: center;">
     <!-- Always prevent more than 100 width/height. Also maintain a max aspect ratio of 3:4 (ipad) -->
     <div id="flutter_target" style="max-width: 100%; width: auto; height: 100%; aspect-ratio: 3/4;"></div>
   </div>
   <script src="flutter_bootstrap.js" async></script>
-  </div>
+  <script>
+    const hideButton = document.getElementById('hideButton');
+    hideButton.addEventListener('click', () => {
+      document.getElementById('headerBar').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
