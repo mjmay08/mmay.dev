@@ -45,9 +45,11 @@
       </div>
       <button id="hideButton" style="position: absolute; top: 10px; right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
     </div>
-    <div style="display: flex; justify-content: center; height: 100%; align-items: center;">
-      <!-- Always prevent more than 100 width/height. Also maintain a max aspect ratio of 3:4 (ipad) -->
-      <div id="flutter_target" style="max-width: 100%; width: auto; height: 100%; aspect-ratio: 3/4;"></div>
+    <div style="flex: 1 1 auto;">
+      <div style="display: flex; justify-content: center; height: 100%; align-items: center;">
+        <!-- Always prevent more than 100 width/height. Also maintain a max aspect ratio of 3:4 (ipad) -->
+        <div id="flutter_target" style="max-width: 100%; width: auto; height: 100%; aspect-ratio: 3/4;"></div>
+      </div>
     </div>
   </div>
   <script src="flutter_bootstrap.js" async></script>
