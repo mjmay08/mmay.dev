@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html style="height: 100%; width: 100%;">
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -32,7 +33,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico"/>
+  <link rel="icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
@@ -44,16 +45,26 @@
     }
   </style>
 </head>
+
 <body style="margin: 0; background-color: black; height: 100%; width: 100%;">
   <div style="height: 100%; width: 100%; display: flex; flex-direction: column;">
     <div id="headerBar" style="flex: 0 1 60px; height: 60px; min-height: 60px; width: 100%;">
-      <div style="height: 100%; width: 100%; display: flex; align-items: center; background-color: #222222; flex: 1 1 auto; gap: 10px; justify-content: space-between;">
-        <a href="../.." style="color: white; text-decoration: none; font-family: Arial, sans-serif; margin-left: 20px; font-size: 18px; display: flex; align-items: center; height: 100%;">&larr; More Games</a>
+      <div
+        style="height: 100%; width: 100%; display: flex; align-items: center; background-color: #222222; flex: 1 1 auto; gap: 10px; justify-content: space-between;">
+        <a href="../.."
+          style="color: white; text-decoration: none; font-family: Arial, sans-serif; margin-left: 20px; font-size: 18px; display: flex; align-items: center; height: 100%;">⇽
+          More Games</a>
         <div style="display: flex; gap: 10px; height: 100%; align-items: center;">
-          <a id="ios-link" style="display: none;" href="https://apps.apple.com/us/app/cross-cribbage/id1540640821" target="_blank" rel="noopener noreferrer"><img src="../../images/appstore.svg" alt="Download on the App Store" style="height:50px;"></a>
-          <a id="android-link" style="display: none;" href="https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="../../images/googleplay.svg" alt="Get it on Google Play" style="height:50px;"></a>
+          <a id="ios-link" style="display: none;" href="https://apps.apple.com/us/app/cross-cribbage/id1540640821"
+            target="_blank" rel="noopener noreferrer"><img src="../../images/appstore.svg"
+              alt="Download on the App Store" style="height:50px;"></a>
+          <a id="android-link" style="display: none;"
+            href="https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&pcampaignid=web_share"
+            target="_blank" rel="noopener noreferrer"><img src="../../images/googleplay.svg" alt="Get it on Google Play"
+              style="height:50px;"></a>
         </div>
-        <button id="hideButton" style="right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
+        <button id="hideButton"
+          style="right: 20px; z-index: 1000; background-color: #222222; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 16px;">Hide</button>
       </div>
     </div>
     <div style="flex: 1 1 auto;">
@@ -70,7 +81,7 @@
       document.getElementById('headerBar').style.display = 'none';
     });
     function getMobileOperatingSystem() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       let os = 'unknown';
 
       // Windows Phone must come first because its UA also contains "Android"
@@ -78,7 +89,16 @@
         os = "Windows Phone";
       } else if (/android/i.test(userAgent)) {
         os = "Android";
-      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      } else if ([
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)) {
         // iOS detection from: http://stackoverflow.com/a/9039885/177710
         os = "iOS";
       }
@@ -97,4 +117,5 @@
     }
   </script>
 </body>
+
 </html>
