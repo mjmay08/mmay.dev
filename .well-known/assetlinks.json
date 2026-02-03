@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "dev.mmay.tilecribbage",
+      "sha256_cert_fingerprints": [
+        "41:49:38:1C:6E:12:53:18:EF:68:DF:98:01:7D:D4:0C:F0:9B:06:B5:06:31:46:CE:FC:E7:51:FB:85:69:7E:67",
+        "8F:C8:7F:8A:89:8B:4E:32:4A:43:B7:2C:58:0A:03:92:D1:33:94:5B:94:68:A7:35:58:6E:37:6A:19:93:74:43"
+      ]
+    }
+  }
+]
