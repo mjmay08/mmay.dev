@@ -5,8 +5,8 @@
       {
         "appID": "5K2QGY3FWA.dev.mmay.tilecribbage",
         "paths": [
-          "/join",
-          "/join/*"
+          "/tile-cribbage/join",
+          "/tile-cribbage/join/*"
         ]
       }
     ]
