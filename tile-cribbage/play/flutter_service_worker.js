@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "a6a86e0e74f421ff7dd995df8866bf2e",
-"assets/AssetManifest.bin.json": "d1450718507c79d106c7c46edbebc806",
-"assets/AssetManifest.json": "933536b968176e6eff4344ceac1429f0",
+const RESOURCES = {"assets/AssetManifest.bin": "f51d6ce44ffe7a5a568cc73573d67073",
+"assets/AssetManifest.bin.json": "0b783995a07a35217526a66836b0f257",
+"assets/AssetManifest.json": "29c2423ef6e16009ea2e3eef7d84d037",
 "assets/assets/fonts/Arial_Rounded_MT_Bold/arialroundedmtbold.ttf": "200135e8e5aec51916af96b03c1ee8fc",
 "assets/assets/images/6-9_flip.png": "b1c6f293322acc444bc60144782b9da4",
 "assets/assets/images/app_store.png": "5bec94a6c68f73df81d9c38294eddc93",
@@ -21,20 +21,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "a6a86e0e74f421ff7dd995df8866bf2e
 "assets/assets/images/light-tile.png": "d706bdbd901745564458ced305a451d9",
 "assets/assets/images/prosaic.png": "0eba0399b4a5e5db7eb7a1f6fa28bbfe",
 "assets/assets/images/sack.png": "2c5fc655be422b37c926572d2014cfcc",
-"assets/assets/music/andando-em-circulos.mp3": "1e39f7b9927da618a301e2d9d813cee7",
-"assets/assets/music/game-loop-11.mp3": "545922d5b427a1397aa7dbc2c1875266",
-"assets/assets/music/game-loop-12.mp3": "f0b5db85f3ee71b4c9e0e422b3b369d9",
-"assets/assets/music/once-more-with-you.mp3": "fb4504c175e407e01901cd8cc1bafcb2",
-"assets/assets/music/one-cool-minute.mp3": "cebdb4009abc6ab175965e1bb9a79b80",
-"assets/assets/music/rainy-night-chilling.mp3": "605abae37e3155902fcbc9d7eb7d38cf",
 "assets/assets/sfx/click4.mp3": "cc7dfb7ff0d5923d857caeaf7d586637",
 "assets/assets/sfx/drop1.mp3": "c6154750a1902eb0e3f884b313c951ac",
 "assets/assets/sfx/drop5.mp3": "9165449387fbb16327d0fa08edb5f29b",
 "assets/assets/sfx/pick2.mp3": "204d43db7d865cffe79b64812ba48f44",
 "assets/assets/sfx/win.mp3": "bb81be530bec88972df97509c8df98ce",
 "assets/FontManifest.json": "c041a4bbc9526f9b40fb6d987c9f110d",
-"assets/fonts/MaterialIcons-Regular.otf": "a3886a48275dee1421762a07650c3688",
-"assets/NOTICES": "97e3c1dadcae443178dd2139f9720305",
+"assets/fonts/MaterialIcons-Regular.otf": "d271559f6874ef3982218c69a88da8e5",
+"assets/NOTICES": "4404829f3b8ca383a0853fdb76dc0d72",
 "assets/packages/wakelock_plus/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "canvaskit/canvaskit.js": "140ccb7d34d0a55065fbd422b843add6",
@@ -59,9 +53,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "a6a86e0e74f421ff7dd995df8866bf2e
 "icons/apple-touch-icon.png": "4ef08c943f144be06b9b6e6faf0437f7",
 "index.html": "f2c6c7c70fb21970e2d6c1e2fd12adeb",
 "/": "f2c6c7c70fb21970e2d6c1e2fd12adeb",
-"main.dart.js": "509340371d50d6c55eb9b793736906db",
+"main.dart.js": "cfa9d675125e5dc067d2818bdaac24e6",
 "manifest.json": "9cb2e69b2206d64a09036d4924f0e180",
-"version.json": "ed3c0387db1391ffd4131d12bd581cbc"};
+"version.json": "cb38658ab2a92e77716035bf75184792"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
