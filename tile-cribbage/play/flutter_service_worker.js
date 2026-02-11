@@ -27,7 +27,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "f51d6ce44ffe7a5a568cc73573d67073
 "assets/assets/sfx/pick2.mp3": "204d43db7d865cffe79b64812ba48f44",
 "assets/assets/sfx/win.mp3": "bb81be530bec88972df97509c8df98ce",
 "assets/FontManifest.json": "c041a4bbc9526f9b40fb6d987c9f110d",
-"assets/fonts/MaterialIcons-Regular.otf": "d271559f6874ef3982218c69a88da8e5",
+"assets/fonts/MaterialIcons-Regular.otf": "d32bfefde2be184f5ee9cd4a3e651d52",
 "assets/NOTICES": "4404829f3b8ca383a0853fdb76dc0d72",
 "assets/packages/wakelock_plus/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
@@ -53,9 +53,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "f51d6ce44ffe7a5a568cc73573d67073
 "icons/apple-touch-icon.png": "4ef08c943f144be06b9b6e6faf0437f7",
 "index.html": "f2c6c7c70fb21970e2d6c1e2fd12adeb",
 "/": "f2c6c7c70fb21970e2d6c1e2fd12adeb",
-"main.dart.js": "cfa9d675125e5dc067d2818bdaac24e6",
+"main.dart.js": "bb7f0484189e0bc14e37b3ecd0c877f1",
 "manifest.json": "9cb2e69b2206d64a09036d4924f0e180",
-"version.json": "cb38658ab2a92e77716035bf75184792"};
+"version.json": "b39a15577c229c0d001cd1176eccf3fa"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
