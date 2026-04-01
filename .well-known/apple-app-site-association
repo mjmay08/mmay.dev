@@ -8,6 +8,13 @@
           "/tile-cribbage/join",
           "/tile-cribbage/join/*"
         ]
+      },
+      {
+        "appID": "5K2QGY3FWA.com.mitchellmay.crosscribbage",
+        "paths": [
+          "/cross-cribbage/join",
+          "/cross-cribbage/join/*"
+        ]
       }
     ]
   }
