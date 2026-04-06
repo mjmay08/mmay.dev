@@ -16,8 +16,8 @@ const RESOURCES = {"assets/AssetManifest.bin": "cf1f393c97a7f3cd8c3ceb35c376ab47
 "assets/assets/sfx/zapsplat_leisure_playing_card_single_place_down_on_table_002_20465.mp3": "459b32971604d160d5663f83ce6d2a1c",
 "assets/assets/sfx/zapsplat_multimedia_button_click_bright_001_92098.mp3": "f7604036d9eb1a1a0c6ecb5b0cbde7f0",
 "assets/FontManifest.json": "590016a821b24c9b84d142ef2a8a9dbc",
-"assets/fonts/MaterialIcons-Regular.otf": "bf03cf3303ea71787987ebe260c303b3",
-"assets/NOTICES": "b80999e9da62b703866b333ade14f387",
+"assets/fonts/MaterialIcons-Regular.otf": "569a3821ebae0a8802387550cb27d5fd",
+"assets/NOTICES": "347c40873540faf58c70037955ca9e81",
 "assets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsOutlined.ttf": "7280e632ce170f469d18df222fce98b1",
 "assets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsRounded.ttf": "871547b681b7ee47ebad5dcd3b316573",
 "assets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsSharp.ttf": "e949713f8bb3a755d44ac95a5a424214",
@@ -62,11 +62,11 @@ const RESOURCES = {"assets/AssetManifest.bin": "cf1f393c97a7f3cd8c3ceb35c376ab47
 "icons/android-chrome-192x192.png": "57a9d71817fe25132c748cfb8f90ba39",
 "icons/android-chrome-512x512.png": "9c4048b1b6bb268aa5ce70505ecfc549",
 "icons/apple-touch-icon.png": "91c92f08e1bd90564a516f5f4cc276ef",
-"index.html": "02ff0ce14d64e0626c07c211e44dda72",
-"/": "02ff0ce14d64e0626c07c211e44dda72",
-"main.dart.js": "f045a7dcb4c5baa3a939dcf63f541fa7",
+"index.html": "f6d9a11a91098da097a00292203e90ae",
+"/": "f6d9a11a91098da097a00292203e90ae",
+"main.dart.js": "d5ed9b5bb049593160ce1e296a281869",
 "manifest.json": "ae4938e6f297bf30ebe855b459a5dfaa",
-"version.json": "c02c6c3ccaa697d945af272479281715"};
+"version.json": "a10a05623b1c411d51ee872ce4ec5e70"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
