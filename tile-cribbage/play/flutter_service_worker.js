@@ -53,9 +53,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "f51d6ce44ffe7a5a568cc73573d67073
 "icons/apple-touch-icon.png": "4ef08c943f144be06b9b6e6faf0437f7",
 "index.html": "f2c6c7c70fb21970e2d6c1e2fd12adeb",
 "/": "f2c6c7c70fb21970e2d6c1e2fd12adeb",
-"main.dart.js": "7bf19d88c7819c208c39da021ab712c2",
+"main.dart.js": "d7f25d85222052d7c30b7d0e0f2f2b0a",
 "manifest.json": "9cb2e69b2206d64a09036d4924f0e180",
-"version.json": "7798ae94823f57e5bf7d51d00e7a3241"};
+"version.json": "2c096228e067b6c5dadc3dda715a98f1"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
